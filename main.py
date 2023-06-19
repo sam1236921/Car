@@ -212,9 +212,9 @@ class Stats(QLabel):
     def path(self):
         self.model = QFileSystemModel()
         self.model.setFilter(QDir.AllDirs | QDir.Files)
-        self.model.setRootPath(QDir.currentPath())
+        self.model.setRootPath(QDir.rootPath())
         self.ui.treeView.setModel(self.model)
-        self.ui.treeView.setRootIndex(self.model.index(QDir.currentPath()))
+        self.ui.treeView.setRootIndex(self.model.index(QDir.rootPath()))
         if self.ui.lineEdit_1.text() !="":
             self.ui.treeView.setRootIndex(self.model.index(self.ui.lineEdit_1.text()))
         
