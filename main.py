@@ -259,19 +259,11 @@ class Stats(QLabel):
         c=[".jpg",".png",".JPG",".PNG"]
         for i in range(4):
             if c[i] in b:
-                cccc=""
-                ccc=a.split("/")[:-1]
-                d=ccc[-1]
-                for f in ccc:
-                    cccc+=f+'\\'
-                print(cccc)                
-                topath=cccc
-                imgpath=topath+b
-                # if self.ui.lineEdit_2.text !=None:
-                #     path=os.listdir(self.ui.lineEdit_2)
-                #     pathimg=os.listdir(self.ui.lineEdit_2+d)
-                #     topath=self.ui.lineEdit_2+d
-                #     imgpath=topath+'\\'+b
+                
+                path=os.listdir(r'C:\Users\Home\car')
+                pathimg=os.listdir(r'C:\Users\Home\car\image')
+                topath=r'C:\Users\Home\car\image'
+                imgpath=topath+'\\'+b
                 
                 # if not os.path.isdir(topath):
                 #     os.makedirs(topath)
